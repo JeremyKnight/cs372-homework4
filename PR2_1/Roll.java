@@ -1,12 +1,16 @@
 import java.util.Random;
+import java.awt.*;
+import javax.swing.*;
 
-class Roll implemetns Runnable {
+
+class Roll implements Runnable {
     private JLabel label;
     Random random = new Random();
     public Roll(JLabel label) {
         this.label = label;
         int i = rand.nextInt(6);
         label.setText(Integer.toString(i));
+        
     }
     public void run() {
         int x = rand.nextInt(1000);
