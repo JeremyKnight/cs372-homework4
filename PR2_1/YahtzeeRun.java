@@ -1,3 +1,8 @@
+/**
+ * This class runs the yahtzee stuff
+ * @author Jeremy Knight
+ */
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.*;
@@ -6,6 +11,9 @@ import javax.swing.*;
 
 
 public class YahtzeeRun {
+    /**
+     * runs the project
+     */
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setSize(500,200);
