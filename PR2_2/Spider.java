@@ -1,3 +1,8 @@
+/**
+ * This class creates and implements the web spider
+ * @author Jeremy Knight
+ */
+
 import java.util.regex.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -16,11 +21,17 @@ public class Spider implements Runnable {
     Map<String, Boolean> websiteMap = new ConcurrentHashMap<String, Boolean>();
     ArrayList<String> emails = new ArrayList<String>();
 
+    /**
+     * This implements spider
+     */
     public Spider(String url) {
        this.url = url;
 
     }
 
+    /** 
+     * This creates the seperate thread to run the search
+     */
     public void run() {
         addWebsites(url);
         findEmail(url);
@@ -51,6 +62,9 @@ public class Spider implements Runnable {
        
     }
 
+    /**
+     * this functions adds websites to the hashmap to be searched through
+     */
     private void addWebsites(String _url) {
         URL u;
         try {
@@ -103,6 +117,9 @@ public class Spider implements Runnable {
         }
     }
 
+    /**
+     * This function finds the emails when given a url string
+     */
     private void findEmail(String s) {
         //href="mailto:
         URL u;
